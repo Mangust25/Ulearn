@@ -3,6 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.0</TargetFramework>
 				<RootNamespace>Ulearn.Common.Api</RootNamespace>
+				<Configurations>Debug;Release;ApiRelease</Configurations>
     </PropertyGroup>
 
     <ItemGroup>

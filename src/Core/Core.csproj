@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>Ulearn.Core</RootNamespace>
+    <Configurations>Debug;Release;ApiRelease</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="DotNetZip" Version="1.11.0" />

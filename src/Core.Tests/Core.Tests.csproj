@@ -5,6 +5,7 @@
 
         <IsPackable>false</IsPackable>
 				<RootNamespace>Ulearn.Core.Tests</RootNamespace>
+				<Configurations>Debug;Release;ApiRelease</Configurations>
     </PropertyGroup>
 
     <ItemGroup>

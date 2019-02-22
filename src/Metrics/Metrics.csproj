@@ -30,6 +30,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ApiRelease|AnyCPU'">
+    <OutputPath>bin\ApiRelease\</OutputPath>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Graphite, Version=1.3.0.0, Culture=neutral, PublicKeyToken=db1870846884bbb9, processorArchitecture=MSIL">
       <HintPath>..\packages\Graphite.1.3.0.0\lib\net40-Client\Graphite.dll</HintPath>

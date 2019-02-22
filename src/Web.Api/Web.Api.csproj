@@ -2,6 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
     <RootNamespace>Ulearn.Web.Api</RootNamespace>
+    <Configurations>Debug;Release;ApiRelease</Configurations>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Community.AspNetCore.ExceptionHandling.Mvc" Version="2.0.3" />

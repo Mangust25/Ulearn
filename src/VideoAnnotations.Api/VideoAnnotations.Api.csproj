@@ -3,6 +3,7 @@
     <PropertyGroup>
 				<RootNamespace>Ulearn.VideoAnnotations.Api</RootNamespace>
         <TargetFramework>netstandard2.0</TargetFramework>
+        <Configurations>Debug;Release;ApiRelease</Configurations>
     </PropertyGroup>
 
     <ItemGroup>
