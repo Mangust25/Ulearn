@@ -1,0 +1,167 @@
+@import "./../../../variables.less";
+
+.root {
+  display: block;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  cursor: pointer;
+}
+
+.itemLink {
+  position: relative;
+  display: block;
+  padding: 10px 19px 10px 24px;
+  color: @linkColor;
+  text-decoration: none;
+  font-weight: 300;
+
+  &:hover {
+    color: #ffffff;
+    background-color: @linkColor;
+  }
+}
+
+.active {
+  background-color: @backgroundGray;
+}
+
+.withMetro {
+  padding-left: 57px;
+}
+
+.firstLine {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  .active & {
+    font-weight: 500;
+  }
+}
+
+.progressWrapper {
+  box-sizing: content-box;
+  width: 47px;
+  flex-shrink: 0;
+  padding-top: 8px;
+  padding-left: 5px;
+}
+
+.scoreWrapper {
+  position: relative;
+  flex-shrink: 0;
+  padding-left: 5px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: right;
+
+  &:before {
+    content: '100%';
+    opacity: 0;
+  }
+}
+
+.score {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  color: @additionalColor;
+
+  .itemLink:hover & {
+    color: #ffffff;
+  }
+}
+
+.description {
+  color: @additionalColor;
+  font-size: 14px;
+  line-height: 24px;
+
+  .itemLink:hover & {
+    color: #ffffff;
+  }
+}
+
+.metroWrapper {
+  position: absolute;
+  left: 30px;
+  top: 0;
+  bottom: 0;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 4px;
+    top: 0;
+    left: 0;
+    bottom: 21px;
+    background-color: @metroDefault;
+  }
+
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 4px;
+    top: 21px;
+    left: 0;
+    bottom: 0;
+    background-color: @metroDefault;
+  }
+}
+
+.longTopLine:before {
+  top: -100px;
+}
+
+.withoutBottomLine:after {
+  display: none;
+}
+
+.completeTop:before {
+  background-color: @progressBarGreen;
+}
+
+.completeBottom:after {
+  background-color: @progressBarGreen;
+}
+
+.pointer {
+  display: block;
+  position: absolute;
+  width: 9px;
+  height: 4px;
+  top: 19px;
+  left: 0;
+  background-color: @metroDefault;
+  z-index: 2;
+}
+
+.icon {
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: 12px;
+  left: -7px;
+  border-radius: 50%;
+  font-size: 11px;
+  line-height: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #ffffff;
+  background-color: @metroDefault;
+  z-index: 2;
+}
+
+.complete {
+  background-color: @progressBarGreen;
+  color: #ffffff;
+}
