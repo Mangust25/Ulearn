@@ -82,7 +82,7 @@ module.exports = function(proxy, allowedHost) {
     public: allowedHost,
 	proxy : [
 	  {
-		  target: "http://ulearn-test-01.dev.kontur.ru:8000",
+		  target: "http://localhost:8000",
 		  context: function (pathname, request) {
 			  return /^\/api/.test(pathname);
 		  },
