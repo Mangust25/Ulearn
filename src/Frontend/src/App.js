@@ -16,6 +16,7 @@ import api from "./api"
 import Toast from "@skbkontur/react-ui/components/Toast/Toast";
 import GroupListPage from "./pages/course/groups/GroupListPage";
 import GroupPage from "./pages/course/groups/GroupPage";
+import Course from './pages/course/CoursePage';
 import { getQueryStringParameter } from "./utils";
 
 import styles from "./App.less"
@@ -99,14 +100,21 @@ class InternalUlearnApp extends Component {
 		return (
 			<BrowserRouter>
 				<ErrorBoundary>
-					{isHeaderVisible && <Header initializing={this.state.initializing} />}
-					{isHeaderVisible && <div className={styles.headerContentDivider} id='headerContentDivider' />}
+					{isHeaderVisible &&
+						<React.Fragment>
+							<Header initializing={this.state.initializing} />
+							<div className={styles.headerContentDivider} id='headerContentDivider' />
+						</React.Fragment>
+					}
 					<NotFoundErrorBoundary>
 						{!this.state.initializing && // Avoiding bug: don't show page while initializing.
 						// Otherwise we make two GET requests sequentially.
 						// Unfortunately some our GET handlers are not idempotent (i.e. /Admin/CheckNextExerciseForSlide)
 						<Switch>
 							<Route path="/Admin/Groups" component={redirectLegacyPage("/:courseId/groups")} />
+
+							<Route path="/course/:courseId/" component={Course} exact />
+							<Route path="/course/:courseId/:slideId" component={Course} exact />
 
 							<Route path="/:courseId/groups/" component={GroupListPage} exact />
 							<Route path="/:courseId/groups/:groupId/" component={GroupPage} exact />

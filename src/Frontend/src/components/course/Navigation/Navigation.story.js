@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import Navigation from './Navigation';
-import { itemTypes } from '../constants';
+import { itemTypes } from './constants';
 
 
 storiesOf("Navigation", module)

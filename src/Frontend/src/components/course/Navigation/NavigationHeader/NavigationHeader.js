@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Link from '@skbkontur/react-ui/Link';
 import LeftIcon from '@skbkontur/react-icons/ArrowChevron2Left';
 import styles from './NavigationHeader.less';
-import ProgressBar from  '../ProgressBar';
+import ProgressBar from '../ProgressBar';
 
 class NavigationHeader extends Component {
 	render () {

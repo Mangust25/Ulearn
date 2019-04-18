@@ -36,7 +36,11 @@ class NavigationContent extends Component {
 
 		if (isCourseNavigation) {
 			return (
-				<NavigationItem text={ menuItem.title } url={ menuItem.url } progress={ menuItem.progress } />
+				<NavigationItem
+					key={ menuItem.url }
+					text={ menuItem.title }
+					url={ menuItem.url }
+					progress={ menuItem.progress } />
 			);
 		}
 
@@ -53,10 +57,12 @@ class NavigationContent extends Component {
 		};
 
 		return (
-			<NavigationItem text={ menuItem.title }
-							url={ menuItem.url }
-							score={ menuItem.progress }
-							metro={ metroSettings }
+			<NavigationItem
+				key={ menuItem.url }
+				text={ menuItem.title }
+				url={ menuItem.url }
+				score={ menuItem.progress }
+				metro={ metroSettings }
 			/>
 		);
 

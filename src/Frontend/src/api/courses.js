@@ -1,4 +1,4 @@
-import api from "../api"
+import api from "../api";
 
 export function getCourses() {
 	return dispatch => {
@@ -10,9 +10,13 @@ export function getCourses() {
 			dispatch({
 				type: 'COURSES__UPDATED',
 				courseById: courseById
-			})
+			});
 		});
 	};
+}
+
+export function getCourse(courseId) {
+	return api.get(`courses/${courseId}`);
 }
 
 export function getUserCourses() {

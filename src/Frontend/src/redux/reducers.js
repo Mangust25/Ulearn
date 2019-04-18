@@ -1,4 +1,6 @@
-import { combineReducers } from "redux"
+import { combineReducers } from "redux";
+import courseReducer from "./course";
+import userReducer from "./user";
 
 const initialAccountState = {
 	isAuthenticated: false,
@@ -37,29 +39,6 @@ function account(state = initialAccountState, action) {
 	}
 }
 
-const initialCoursesState = {
-	courseById: {},
-	currentCourseId: undefined,
-	// currentSlideId: undefined,
-};
-
-function courses(state = initialCoursesState, action) {
-	switch (action.type) {
-		case 'COURSES__UPDATED':
-			return {
-				...state,
-				courseById: action.courseById
-			};
-		case 'COURSES__COURSE_ENTERED':
-			return {
-				...state,
-				currentCourseId: action.courseId
-			};
-		default:
-			return state;
-	}
-}
-
 const initialNotificationsState = {
 	count: 0,
 	lastTimestamp: ""
@@ -85,7 +64,8 @@ function notifications(state = initialNotificationsState, action) {
 
 const rootReducer = combineReducers({
 	account,
-	courses,
+	courses: courseReducer,
+	user: userReducer,
 	notifications
 });
 

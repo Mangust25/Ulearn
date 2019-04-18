@@ -5,6 +5,7 @@ import { Redirect } from 'react-router-dom';
 import { withRouter } from "react-router-dom";
 import { Helmet } from "react-helmet";
 import api from "../../../api/index";
+import { COURSES__COURSE_ENTERED } from "../../../consts/actions";
 import Tabs from "@skbkontur/react-ui/components/Tabs/Tabs";
 import Button from "@skbkontur/react-ui/components/Button/Button";
 import Toast from "@skbkontur/react-ui/components/Toast/Toast";
@@ -277,7 +278,7 @@ class GroupPage extends Component {
 	static mapDispatchToProps(dispatch) {
 		return {
 			enterToCourse: (courseId) => dispatch({
-				type: 'COURSES__COURSE_ENTERED',
+				type: COURSES__COURSE_ENTERED,
 				courseId: courseId
 			}),
 		}

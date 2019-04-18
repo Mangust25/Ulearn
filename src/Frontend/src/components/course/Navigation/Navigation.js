@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-import NavigationHeader from '../NavigationHeader';
-import NavigationContent from '../NavigationContent';
-import { menuItemType } from '../types';
+import NavigationHeader from './NavigationHeader';
+import NavigationContent from './NavigationContent';
+import { menuItemType } from './types';
 import styles from './Navigation.less';
 
 
